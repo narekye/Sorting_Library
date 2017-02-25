@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Text.RegularExpressions;
+
 namespace Bubble_Sort
 {
     class Program
@@ -69,6 +71,27 @@ namespace Bubble_Sort
             }
         }
         #endregion
+
+        public static void PadLeft(ref int[] arr, int howmanytimes)
+        {
+            while (howmanytimes != 0)
+            {
+                int temp = arr[0];
+
+                for (int i = 0; i <= arr.Length; i++)
+                {
+                    if (i == arr.Length - 1)
+                    {
+                        arr[i] = temp;
+                        break;
+                    }
+
+                    arr[i] = arr[i + 1];
+
+                }
+                howmanytimes--;
+            }
+        }
 
     }
 }
