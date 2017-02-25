@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Specialized;
+using System.Runtime.Remoting.Messaging;
+
 namespace Bubble_Sort
 {
     class Program
@@ -36,6 +39,17 @@ namespace Bubble_Sort
             y = temp;
         }
 
+        public static void Exchange(ref int[] arr, int first, int end)
+        {
+            if (first > arr.Length || end > arr.Length)
+            {
+                Console.WriteLine("The sended parameters {0} and {1} are out of range", first, end);
+                return;
+            }
+            int temp = arr[first];
+            arr[first] = arr[end];
+            arr[end] = temp;
+        }
 
     }
 }
