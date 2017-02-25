@@ -13,7 +13,7 @@ namespace Bubble_Sort
             }
         }
 
-        static void Bubble(ref int[] array)
+        public static void Bubble(ref int[] array)
         {
             int temp = 0;
 
@@ -35,5 +35,7 @@ namespace Bubble_Sort
             x = y;
             y = temp;
         }
+
+
     }
 }
