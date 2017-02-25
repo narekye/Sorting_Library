@@ -51,5 +51,27 @@ namespace Bubble_Sort
             arr[end] = temp;
         }
 
+        #region Generate Random Array
+        public static int[] RandomArray(int length)
+        {
+            Random rd = new Random();
+            int[] arr = new int[length];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rd.Next(int.MinValue, int.MaxValue);
+            }
+            return arr;
+        }
+
+        public static void RandomArray(ref int[] arr)
+        {
+            Random rd = new Random();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                arr[i] = rd.Next(int.MinValue, int.MaxValue);
+            }
+        }
+        #endregion
+
     }
 }
