@@ -3,7 +3,7 @@ namespace Bubble_Sort
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             int[] a = { 12, 4, 5, 3, 4, 5, 6, 6, 76, 7, 78, 2, 5, 6, 7 };
             Bubble(ref a);
