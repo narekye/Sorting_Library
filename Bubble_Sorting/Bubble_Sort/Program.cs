@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Specialized;
-using System.Runtime.Remoting.Messaging;
-
 namespace Bubble_Sort
 {
     class Program
