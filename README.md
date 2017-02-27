@@ -5,3 +5,5 @@ Sorting examples on C#.
 [Bubble sorting](https://github.com/narekye/Sorting_Examples/tree/master/Bubble_Sorting)
 
 [Binary search](https://github.com/narekye/Sorting_Examples/tree/master/Binary_Search)
+
+[Insertion sort](https://github.com/narekye/Sorting_Examples/tree/master/Insertio_Sort)
