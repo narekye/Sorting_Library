@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Console;
 namespace Bubble_Sort
 {
     class Program
@@ -9,8 +10,10 @@ namespace Bubble_Sort
             Bubble(ref a);
             foreach (var i in a)
             {
-                Console.WriteLine(i);
+                WriteLine(i);
             }
+            PadLeft(ref a,7);
+
         }
 
         public static void Bubble(ref int[] array)
@@ -38,9 +41,13 @@ namespace Bubble_Sort
 
         public static void Exchange(ref int[] arr, int first, int end)
         {
+            if (first < 0 || end < 0)
+            {
+                WriteLine("Not correct indexes were inputed");
+            }
             if (first > arr.Length || end > arr.Length)
             {
-                Console.WriteLine("The sended parameters {0} and {1} are out of range", first, end);
+                WriteLine("The sended parameters {0} and {1} are out of range", first, end);
                 return;
             }
             int temp = arr[first];
@@ -49,6 +56,7 @@ namespace Bubble_Sort
         }
 
         #region Generate Random Array
+        // returns without ref.
         public static int[] RandomArray(int length)
         {
             Random rd = new Random();
@@ -59,7 +67,7 @@ namespace Bubble_Sort
             }
             return arr;
         }
-
+        // Returns with ref
         public static void RandomArray(ref int[] arr)
         {
             Random rd = new Random();
@@ -69,7 +77,6 @@ namespace Bubble_Sort
             }
         }
         #endregion
-
         public static void PadLeft(ref int[] arr, int howmanytimes)
         {
             while (howmanytimes != 0)
@@ -85,7 +92,6 @@ namespace Bubble_Sort
                     }
 
                     arr[i] = arr[i + 1];
-
                 }
                 howmanytimes--;
             }
