@@ -12,7 +12,8 @@ namespace Bubble_Sort
             {
                 WriteLine(i);
             }
-            PadLeft(ref a,7);
+            int[] arr = RandomArray(20);
+            PadLeft(ref arr, 5);
 
         }
 
@@ -90,7 +91,6 @@ namespace Bubble_Sort
                         arr[i] = temp;
                         break;
                     }
-
                     arr[i] = arr[i + 1];
                 }
                 howmanytimes--;
