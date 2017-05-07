@@ -16,7 +16,7 @@ namespace Insertion_Sorting
             }
         }
 
-        static T[] PerformInsertionSort<T>(T[] inputarray, Comparer<T> comparer = null)
+        static void PerformInsertionSort<T>(T[] inputarray, Comparer<T> comparer = null)
         {
             var equalityComparer = comparer ?? Comparer<T>.Default;
             for (int counter = 0; counter < inputarray.Length - 1; counter++)
@@ -27,14 +27,13 @@ namespace Insertion_Sorting
                     // if we change the statement to .... < 0 it will sorted by descending.
                     if (equalityComparer.Compare(inputarray[index - 1], inputarray[index]) > 0)
                     {
-                        var temp = inputarray[index - 1];
+                        T temp = inputarray[index - 1];
                         inputarray[index - 1] = inputarray[index];
                         inputarray[index] = temp;
                     }
                     index--;
                 }
             }
-            return inputarray;
         }
     }
 }
