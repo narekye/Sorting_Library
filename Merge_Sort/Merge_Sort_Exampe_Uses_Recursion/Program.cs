@@ -7,7 +7,7 @@ namespace Merge_Sort_Exampe_Uses_Recursion
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             int[] array = new int[10000];
             Random rd = new Random();
