@@ -2,8 +2,8 @@
  
 Sorting examples on C#.
 
-[Bubble sorting](https://github.com/narekye/Sorting_Examples/tree/master/Bubble_Sorting)
-
-[Binary search](https://github.com/narekye/Sorting_Examples/tree/master/Binary_Search)
-
-[Insertion sort](https://github.com/narekye/Sorting_Examples/tree/master/Insertio_Sort)
+Sorting library with generics -> [Download](https://codeload.github.com/narekye/Sorting_Examples/zip/master) <br />
+[Bubble sorting](https://github.com/narekye/Sorting_Examples/tree/master/Bubble_Sorting) <br />
+[Binary search](https://github.com/narekye/Sorting_Examples/tree/master/Binary_Search) <br />
+[Insertion sort](https://github.com/narekye/Sorting_Examples/tree/master/Insertio_Sort) <br />
+[Merge sort](https://github.com/narekye/Sorting_Examples/tree/master/Merge_Sort) <br />
