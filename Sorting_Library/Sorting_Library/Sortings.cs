@@ -170,9 +170,9 @@ namespace Sorting_Library
         }
         #endregion
 
+
         #region Quick
-
-
+        public static void PerformQuickSort<T>(this T[] array) { }
         #endregion
     }
 }
