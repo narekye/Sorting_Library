@@ -170,7 +170,11 @@ namespace Sorting_Library
         }
         #endregion
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="array"></param>
         #region Quick
         public static void PerformQuickSort<T>(this T[] array) { }
         #endregion
