@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Sorting_Library
 {
     /// <summary>
-    /// Perform own sorting algorithm with extension mehods
+    /// Perform own sorting algorithm with extension methods
     /// Generic types included to all algorithms.
     /// </summary>
     public static class Sortings
@@ -15,7 +15,7 @@ namespace Sorting_Library
         /// Memory: O(1) , O(1) , O(1) <para />
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="array to be sorted"></param>
+        /// <param name="array"></param>
         /// <returns>void</returns>
         #region Bubble
         public static void PerformBubbleSort<T>(this T[] array, Comparer<T> comparer = null)
@@ -35,27 +35,34 @@ namespace Sorting_Library
 
         private static void Swap<T>(ref T x, ref T y)
         {
+            Comparer<T> comparer = Comparer<T>.Default;
+            if (comparer.Compare(x, y) == 0) return;
             T temp = x;
             x = y;
             y = temp;
         }
         #endregion Bubble
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="array"></param>
         #region Insertion
-        public static void PerformInsertionSort<T>(this T[] inputarray, Comparer<T> comparer = null)
+        public static void PerformInsertionSort<T>(this T[] array, Comparer<T> comparer = null)
         {
             var equalityComparer = comparer ?? Comparer<T>.Default;
-            for (int counter = 0; counter < inputarray.Length - 1; counter++)
+            for (int counter = 0; counter < array.Length - 1; counter++)
             {
                 int index = counter + 1;
                 while (index > 0)
                 {
                     // if we change the statement to .... < 0 it will sorted by descending.
-                    if (equalityComparer.Compare(inputarray[index - 1], inputarray[index]) > 0)
+                    if (equalityComparer.Compare(array[index - 1], array[index]) > 0)
                     {
-                        T temp = inputarray[index - 1];
-                        inputarray[index - 1] = inputarray[index];
-                        inputarray[index] = temp;
+                        T temp = array[index - 1];
+                        array[index - 1] = array[index];
+                        array[index] = temp;
                     }
                     index--;
                 }
@@ -63,6 +70,11 @@ namespace Sorting_Library
         }
         #endregion
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="array"></param>
         #region Merge
 
         public static void PerformMergeSort<T>(this T[] array)
@@ -116,14 +128,49 @@ namespace Sorting_Library
         }
         #endregion
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="array"></param>
         #region Selection
+        public static void PerformSelectionSort<T>(this T[] array)
+        {
+            int sortedRangeEnd = 0;
+            while (sortedRangeEnd < array.Length)
+            {
+                int nextSmallestIndex = FindIndex(array, sortedRangeEnd);
+                Swap(array, sortedRangeEnd, nextSmallestIndex);
+                sortedRangeEnd++;
+            }
+        }
 
+        private static void Swap<T>(T[] array, int left, int right)
+        {
+            if (left == right) return;
+            T temp = array[left];
+            array[left] = array[right];
+            array[right] = temp;
 
-
+        }
+        private static int FindIndex<T>(T[] array, int index)
+        {
+            Comparer<T> equality = Comparer<T>.Default;
+            T current = array[index];
+            int currentindex = index;
+            for (int i = index + 1; i < array.Length; i++)
+            {
+                if (equality.Compare(current, array[i]) > 0)
+                {
+                    current = array[i];
+                    currentindex = i;
+                }
+            }
+            return currentindex;
+        }
         #endregion
 
         #region Quick
-
 
 
         #endregion
