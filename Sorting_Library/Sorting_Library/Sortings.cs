@@ -3,8 +3,20 @@ using System.Collections.Generic;
 
 namespace Sorting_Library
 {
+    /// <summary>
+    /// Perform own sorting algorithm with extension mehods
+    /// Generic types included to all algorithms.
+    /// </summary>
     public static class Sortings
     {
+        /// <summary>
+        /// Bubble Sorting, best and worst cases pasted in text below for Big - O <para />
+        /// Hardest: O(n) , O(n^2) , O(n^2) <para />
+        /// Memory: O(1) , O(1) , O(1) <para />
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="array to be sorted"></param>
+        /// <returns>void</returns>
         #region Bubble
         public static void PerformBubbleSort<T>(this T[] array, Comparer<T> comparer = null)
         {
@@ -102,6 +114,18 @@ namespace Sorting_Library
                 remaining--;
             }
         }
+        #endregion
+
+        #region Selection
+
+
+
+        #endregion
+
+        #region Quick
+
+
+
         #endregion
     }
 }
