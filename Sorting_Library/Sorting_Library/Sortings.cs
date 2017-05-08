@@ -18,9 +18,9 @@ namespace Sorting_Library
         /// <param name="array"></param>
         /// <returns>void</returns>
         #region Bubble
-        public static void PerformBubbleSort<T>(this T[] array, Comparer<T> comparer = null)
+        public static void PerformBubbleSort<T>(this T[] array)
         {
-            var equalityComparer = comparer ?? Comparer<T>.Default;
+            var equalityComparer = Comparer<T>.Default;
             for (int i = 0; i < array.Length; i++)
             {
                 for (int j = 0; j < array.Length - 1; j++)
