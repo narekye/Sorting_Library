@@ -10,6 +10,8 @@ namespace Testing
             int[] arr = { 3, 1, 3, 4, 6, 2, 3, 1, 4, 4 };
             arr.PerformBubbleSort();
             arr.PerformSelectionSort();
+            arr.PerformInsertionSort();
+            arr.PerformMergeSort();
             foreach (int i in arr)
             {
                 Console.WriteLine(i);

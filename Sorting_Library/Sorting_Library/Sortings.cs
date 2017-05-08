@@ -44,10 +44,13 @@ namespace Sorting_Library
         #endregion Bubble
 
         /// <summary>
-        /// 
+        /// Insertion Sorting, best and worst cases pasted in text below for Big - O <para />
+        /// Hardest: O(n) , O(n^2) , O(n^2) <para />
+        /// Memory: O(1) , O(1) , O(1) <para />
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="array"></param>
+        /// <returns>void</returns>
         #region Insertion
         public static void PerformInsertionSort<T>(this T[] array, Comparer<T> comparer = null)
         {
@@ -71,10 +74,14 @@ namespace Sorting_Library
         #endregion
 
         /// <summary>
-        /// 
+        /// Merge Sorting, best and worst cases pasted in text below for Big - O <para />
+        /// Using recursion for cutting the array to subarrays. <para />
+        /// Hardest: O(n log n) , O(n log n) , O(n log n) <para />
+        /// Memory: O(n) , O(n) , O(n) <para />
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="array"></param>
+        /// <returns>void</returns>
         #region Merge
 
         public static void PerformMergeSort<T>(this T[] array)
@@ -129,10 +136,13 @@ namespace Sorting_Library
         #endregion
 
         /// <summary>
-        /// 
+        /// Selection Sorting, best and worst cases pasted in text below for Big - O <para />
+        /// Hardest: O(n) , O(n^2) , O(n^2) <para />
+        /// Memory: O(1) , O(1) , O(1) <para />
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="array"></param>
+        /// <returns>void</returns>
         #region Selection
         public static void PerformSelectionSort<T>(this T[] array)
         {
