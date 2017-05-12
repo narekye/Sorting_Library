@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Sorting_Library
+﻿namespace Sorting_Library
 {
+    using System;
+    using System.Collections.Generic;
+
     /// <summary>
     /// Perform own sorting algorithm with extension methods
     /// Generic types included to all algorithms.
