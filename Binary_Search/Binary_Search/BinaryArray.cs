@@ -1,7 +1,7 @@
-﻿using System;
-using static System.Console;
-namespace Binary_Search
+﻿namespace Binary_Search
 {
+    using System;
+    using static System.Console;
     class BinaryArray
     {
         private int[] data;
@@ -53,7 +53,6 @@ namespace Binary_Search
             {
                 temporary += "    ";
             }
-
             // output elements left in array 
             for (int i = low; i <= high; i++)
             {
